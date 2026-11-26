@@ -1,0 +1,45 @@
+Total event coverage: 2.8%
+==========================
+Monitor: AccessControlSafety
+============================
+Event coverage: 0.0%
+
+	State: Init is uncovered
+		Events not covered: eAccessGranted, eCredentialsAccepted, eMFAAccepted, eSessionEnded
+
+StateMachine: AuthenticationServer
+==================================
+Event coverage: 3.3%
+
+	State: WaitingCredentials
+		State event coverage: 16.7%
+		Events received: eRequestProtectedResource
+		Events not covered: eSessionEnded, eSubmitInvalidCredentials, eSubmitInvalidTOTP, eSubmitValidCredentials, eSubmitValidTOTP
+
+	State: WaitingTOTP is uncovered
+		Events not covered: eRequestProtectedResource, eSessionEnded, eSubmitInvalidCredentials, eSubmitInvalidTOTP, eSubmitValidCredentials, eSubmitValidTOTP
+
+	State: Authenticated is uncovered
+		Events not covered: eRequestProtectedResource, eSessionEnded, eSubmitInvalidCredentials, eSubmitInvalidTOTP, eSubmitValidCredentials, eSubmitValidTOTP
+
+	State: Denied is uncovered
+		Events not covered: eRequestProtectedResource, eSessionEnded, eSubmitInvalidCredentials, eSubmitInvalidTOTP, eSubmitValidCredentials, eSubmitValidTOTP
+
+	State: Locked is uncovered
+		Events not covered: eRequestProtectedResource, eSessionEnded, eSubmitInvalidCredentials, eSubmitInvalidTOTP, eSubmitValidCredentials, eSubmitValidTOTP
+
+Monitor: LockoutSafety
+======================
+Event coverage: 0.0%
+
+	State: Init is uncovered
+		Events not covered: eAccessGranted, eAccountLocked
+
+StateMachine: TestUnauthenticatedAccess
+=======================================
+Event coverage: 100.0%
+
+	State: Init
+		State has no expected events, so coverage is 100%
+		Events sent: eRequestProtectedResource
+
