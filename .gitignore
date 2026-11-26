@@ -1,0 +1,14 @@
+# P generated files
+PGenerated/
+PCheckerOutput/
+
+# .NET build artifacts
+bin/
+obj/
+
+# IDE and Windows files
+.vs/
+*.user
+*.suo
+Thumbs.db
+.DS_Store
